@@ -1,30 +1,56 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
+import {ref} from "vue";
+
+const name = ref("Nathan CORNELIE")
+const menus = ref<string[]>(["Bio", "Paper", "Talks","News","Experience", "Projects","Teaching"])
 </script>
 
 <template>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
-  </div>
-  <HelloWorld msg="Vite + Vue" />
+  <v-app class="app">
+    <v-app-bar :elevation="2" class="nav-bar" height="72">
+      <template v-slot:prepend>
+        <p class="nav-name text-start">{{ name }}</p>
+        <v-app-bar-nav-icon></v-app-bar-nav-icon>
+      </template>
+      <template v-slot:default class="menus">
+        <div v-for="menu in menus" class="menu">
+          <p>{{menu}}</p>
+        </div>
+      </template>
+      <template v-slot:append>
+        <v-btn color="primary">
+
+          <mdicon name="magnify"  class="nav-icon" style="margin-right: 5px" ></mdicon>
+          <mdicon name="white-balance-sunny" class="nav-icon"></mdicon>
+        </v-btn>
+
+      </template>
+    </v-app-bar>
+    <RouterView/>
+  </v-app>
+
+
 </template>
 
 <style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.app{
+  background-color: #eeeeee
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+.nav-name{
+  margin-left: 5px;
 }
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+.nav-bar{
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.menus{
+  width: 100%;
+  justify-content: space-around;
+}
+.menu{
+  margin: 0 10px;
+}
+.nav-icon{
+  color: black;
 }
 </style>
