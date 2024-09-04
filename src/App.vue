@@ -1,20 +1,26 @@
 <script setup lang="ts">
-import {ref} from "vue";
 
+
+import {ref} from "vue";
+import {router} from "./main.ts"
 const name = ref("Nathan CORNELIE")
-const menus = ref<string[]>(["Bio", "Paper", "Talks","News","Experience", "Projects","Teaching"])
+const menus = ref<string[]>(["bio", "articles","experiences", "projects"])
+
+
 </script>
 
 <template>
   <v-app class="app">
     <v-app-bar :elevation="2" class="nav-bar" height="72">
       <template v-slot:prepend>
+
         <p class="nav-name text-start">{{ name }}</p>
         <v-app-bar-nav-icon></v-app-bar-nav-icon>
       </template>
       <template v-slot:default class="menus">
         <div v-for="menu in menus" class="menu">
-          <p>{{menu}}</p>
+         <p @click="router.push('/'+menu)">{{menu.toString()}}</p>
+<!--          <RouterLink to="/articles">{{menu}}</RouterLink>-->
         </div>
       </template>
       <template v-slot:append>
@@ -26,7 +32,10 @@ const menus = ref<string[]>(["Bio", "Paper", "Talks","News","Experience", "Proje
 
       </template>
     </v-app-bar>
-    <RouterView/>
+    <div style="margin-top: 60px">
+      <RouterView/>
+    </div>
+
   </v-app>
 
 

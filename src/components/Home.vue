@@ -158,7 +158,7 @@ const info = ref({
   display: flex;
   align-items: center;
   justify-content: space-around;
-  margin-top: 60px;
+
 
   padding: 0 90px;
   width: 100%;

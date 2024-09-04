@@ -1,24 +1,28 @@
 import {createApp} from 'vue'
 import './style.css'
-import App from './App.vue'
 import {createMemoryHistory, createRouter} from 'vue-router'
 // Vuetify
 import 'vuetify/styles'
 import {createVuetify} from 'vuetify'
 import * as components from 'vuetify/components'
 import * as directives from 'vuetify/directives'
-import Home from "./components/Home.vue";
+//icons
 import mdiVue from 'mdi-vue/v3'
 import * as mdijs from '@mdi/js'
+//Components
+import App from './App.vue'
+import Home from "./components/Home.vue";
+import Articles from "./components/Articles.vue";
 
 const vuetify = createVuetify({
     components,
     directives,
 })
-const router = createRouter({
+export const router = createRouter({
     history: createMemoryHistory(),
     routes: [
-        {path: '/', component: Home}
+        {path: '/', component: Home},
+        {name:"articles",path: '/articles',component: Articles}
     ]
 })
 
