@@ -1,31 +1,25 @@
 {
-  "name": "resume-template",
+  "name": "nuxt-app",
   "private": true,
-  "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vue-tsc -b && vite build",
-    "preview": "vite preview"
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
   },
   "dependencies": {
     "@mdi/font": "^7.4.47",
-    "@mdi/js": "^7.4.47",
+    "import": "^0.0.6",
     "material-design-icons-iconfont": "^6.7.0",
-    "mdi-vue": "^3.0.13",
-    "vue": "^3.4.37",
-    "vue-markdown-render": "^2.2.1",
-    "vue-router": "4"
+    "nuxt": "^3.13.0",
+    "nuxt-mdi": "^2.1.1",
+    "sass-embedded": "^1.79.3",
+    "vue": "latest",
+    "vue-router": "latest",
+    "vuetify": "^3.7.2",
+    "vuetify-nuxt-module": "^0.18.3"
   },
-  "devDependencies": {
-    "@types/markdown-it": "^14.1.2",
-    "@vitejs/plugin-vue": "^5.1.2",
-    "sass": "^1.78.0",
-    "sass-loader": "^16.0.1",
-    "typescript": "^5.5.3",
-    "vite": "^5.4.1",
-    "vite-plugin-vuetify": "^2.0.4",
-    "vue-tsc": "^2.0.29",
-    "vuetify": "^3.7.1"
-  }
+  "packageManager": "pnpm@9.11.0+sha1.4cd20e68438613738e8f2bc9aece61eaa6b3e649"
 }
