@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   compatibilityDate: "2024-04-03",
   devtools: { enabled: true },
   css: ["@mdi/font/css/materialdesignicons.css"],
-  modules: ["vuetify-nuxt-module", "nuxt-mdi"],
+  modules: ["vuetify-nuxt-module", "nuxt-mdi", "@nuxt/image"],
   vuetify: {
     vuetifyOptions: {
       icons: {

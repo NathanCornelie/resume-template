@@ -28,7 +28,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  background-color: #eeeeee;
+  background-color: #e4bad4;
 }
 
 h1 {
@@ -58,8 +58,6 @@ button:focus-visible {
 .card {
   padding: 2em;
 }
-
-
 
 /*@media (prefers-color-scheme: light) {*/
 /*  :root {*/

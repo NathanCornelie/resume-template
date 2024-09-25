@@ -1,0 +1,105 @@
+<template>
+  <div>
+    <v-timeline direction="vertical" side="end">
+      <v-timeline-item v-for="exp in experiences">
+        <template v-slot:opposite>
+          <div class="d-flex flex-column align-center">
+            <p>{{ exp.debut }}</p>
+            <p>-</p>
+            <p>{{ exp.fin }}</p>
+          </div>
+        </template>
+        <v-card
+          variant="outlined"
+          class="expCard"
+          elevation="0"
+          :title="exp.titre"
+          :subtitle="exp.lieu"
+        >
+          <template v-slot:text>
+            <div class="d-md-flex md-flex-column align-center">
+              <div class="d-flex align-center justify-center">
+                <nuxt-img style="width: 300px" src="/claim_logo.png">
+                </nuxt-img>
+              </div>
+
+              <v-list class="bg-transparent">
+                <v-list-item v-for="mission in exp.missions">
+                  <div class="d-flex flex-column align-start justify-start">
+                    <h4>{{ mission.titre }}</h4>
+                    <div class="pl-2">
+                      <div v-for="tache in mission.taches">
+                        {{ tache }}
+                      </div>
+                    </div>
+                  </div>
+                </v-list-item>
+              </v-list>
+            </div>
+          </template>
+        </v-card>
+      </v-timeline-item>
+    </v-timeline>
+  </div>
+</template>
+
+<script lang="ts" setup>
+const experiences = ref([
+  {
+    titre: "Stage Ingénieur DevOps Cloud",
+    lieu: "Excellium Services Luxembourg",
+    debut: "Mars 2024",
+    fin: "Août 2024",
+    missions: [
+      {
+        titre: "Réalisation de scripts d’automatisation avec Ansible",
+        taches: [
+          "configuration d’instances VPN clients et serveurs",
+          "Ajout de règles de firewall",
+        ],
+      },
+      {
+        titre:
+          "Développement d\’une application fullStack avec ReactJS en TypeScript et NodeJS",
+        taches: [],
+      },
+      {
+        titre:
+          "Réalisation de pipelines AzureDevOps pour la sécurisation d’image Docker",
+        taches: [],
+      },
+      {
+        titre:
+          "Développement d’outils en Python pour relever les erreurs présentes dans les fichier de configuration d’un firewall et générer des rapports.",
+        taches: [],
+      },
+    ],
+  },
+  {
+    titre: "Stage Développeur",
+    lieu: "BIAC Log SA Luxembourg",
+    debut: "Juin 2023",
+    fin: "Août 2023",
+    missions: [
+      {
+        titre:
+          "Développement de pages pour d’une application sur mesure de gestion pour une société luxembourgeoise en VueJS et Typescript",
+        taches: [],
+      },
+      {
+        titre:
+          "Amélioration d’une API pour répondre aux besoins des pages avec le Framework .NET en C#",
+        taches: [],
+      },
+    ],
+  },
+]);
+</script>
+
+<style scoped lang="scss">
+.expCard {
+  background-color: #ffffff98;
+  border: 2px solid;
+  border-color: rgb(255, 255, 255);
+}
+</style>

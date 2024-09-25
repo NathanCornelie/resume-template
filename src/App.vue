@@ -1,65 +1,60 @@
 <script setup lang="ts">
-
-
-import {ref} from "vue";
-import {router} from "./main.ts"
-const name = ref("Nathan CORNELIE")
-const menus = ref<string[]>(["bio", "articles","experiences", "projects"])
-
-
+import { ref } from "vue";
+const router = useRouter();
+const name = ref("Nathan CORNELIE");
+const menus = ref<string[]>(["bio", "articles", "experiences", "projects"]);
 </script>
 
 <template>
-  <v-app class="app">
+  <v-app class="bg-transparent">
     <v-app-bar :elevation="2" class="nav-bar" height="72">
       <template v-slot:prepend>
-
         <p class="nav-name text-start">{{ name }}</p>
         <v-app-bar-nav-icon></v-app-bar-nav-icon>
       </template>
       <template v-slot:default class="menus">
         <div v-for="menu in menus" class="menu">
-         <p @click="router.push('/'+menu)">{{menu.toString()}}</p>
-<!--          <RouterLink to="/articles">{{menu}}</RouterLink>-->
+          <p @click="router.push('/' + menu)">{{ menu.toString() }}</p>
+          <!--          <RouterLink to="/articles">{{menu}}</RouterLink>-->
         </div>
       </template>
       <template v-slot:append>
         <v-btn color="primary">
-
-          <mdicon name="magnify"  class="nav-icon" style="margin-right: 5px" ></mdicon>
+          <mdicon
+            name="magnify"
+            class="nav-icon"
+            style="margin-right: 5px"
+          ></mdicon>
           <mdicon name="white-balance-sunny" class="nav-icon"></mdicon>
         </v-btn>
-
       </template>
     </v-app-bar>
     <div style="margin-top: 60px">
-      <RouterView/>
+      <RouterView />
     </div>
-
   </v-app>
-
-
+  hhssssssssssss
 </template>
 
 <style scoped>
-.app{
-  background-color: #eeeeee
+body {
+  background-color: #e4bad4;
 }
-.nav-name{
+.nav-name {
   margin-left: 5px;
 }
-.nav-bar{
+.nav-bar {
   font-size: 1.25rem;
   font-weight: 600;
 }
-.menus{
+.menus {
   width: 100%;
   justify-content: space-around;
 }
-.menu{
+.menu {
   margin: 0 10px;
 }
-.nav-icon{
+.nav-icon {
   color: black;
 }
 </style>

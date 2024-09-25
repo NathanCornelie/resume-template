@@ -158,8 +158,6 @@ const info = ref({
   display: flex;
   align-items: center;
   justify-content: space-around;
-
-
   padding: 0 90px;
   width: 100%;
 }

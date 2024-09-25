@@ -1,5 +1,5 @@
 <template>
-  <v-app class="app">
+  <v-app class="app" style="width: 100vw">
     <v-app-bar :elevation="2" class="nav-bar" height="72">
       <template v-slot:prepend>
         <p class="nav-name text-start">
@@ -9,7 +9,9 @@
       <template v-slot:default class="menus">
         <div v-for="menu in menus" class="menu">
           <p>
-            <NuxtLink :to="menu">{{ menu.toString() }}</NuxtLink>
+            <NuxtLink :to="'/' + menu.toLowerCase()">{{
+              menu.toString()
+            }}</NuxtLink>
           </p>
         </div>
       </template>
@@ -33,19 +35,19 @@
 <script lang="ts" setup>
 import { ref } from "vue";
 const name = ref("Nathan CORNELIE");
-const menus = ref<string[]>(["bio", "articles", "experiences", "projects"]);
+const menus = ref<string[]>(["Experiences", "Articles", "Projects"]);
 const router = useRouter();
 </script>
 
 <style scoped>
 #app {
-  margin: 0 auto;
+  margin: 10px auto;
   padding: 4rem;
-  text-align: center;
-  background-color: #eeeeee;
+  background-color: #e4bad4;
 }
 .app {
-  background-color: #eeeeee;
+  width: 100%;
+  background-color: #e4bad4;
 }
 .nav-name {
   margin-left: 5px;
