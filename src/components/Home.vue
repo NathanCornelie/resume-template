@@ -1,7 +1,5 @@
 <script setup lang="ts">
-
 import { ref } from "vue";
-import { props } from "mdi-vue/types/src/props";
 
 const info = ref({
   name: "Nathan CORNELIE",
@@ -50,17 +48,18 @@ const info = ref({
 </script>
 
 <template>
-  <v-card
-    class="infos-container d-lg-flex d-block bg-teal-darken-4"
-    min-height="500px"
-  >
+  <v-card class="infos-container d-lg-flex d-block" min-height="500px">
     <div>
       <v-card
         class="bg-transparent d-flex flex-column justify-center align-center"
         :elevation="0"
       >
         <v-card class="photo" max-width="180px" max-height="180px">
-          <v-img class="bg-white mb-16" src="/profile.jpeg" width="180px"></v-img>
+          <v-img
+            class="bg-white mb-16"
+            src="/profile.jpeg"
+            width="180px"
+          ></v-img>
         </v-card>
         <p class="font-weight-bold">{{ info.name }}</p>
         <p>{{ info.job }}</p>
@@ -129,7 +128,7 @@ const info = ref({
   </section>
 
   <section>
-    <v-card >
+    <v-card>
       <h2>Featured Publications</h2>
       <v-container fluid>
         <v-row dense>
@@ -142,7 +141,9 @@ const info = ref({
               <v-img :src="pub.image"></v-img>
               <v-card-text>
                 <h3 class="pub-title">{{ pub.title }}</h3>
-                <p class="pub-description text-grey-darken-2 ">{{ pub.description }}</p>
+                <p class="pub-description text-grey-darken-2">
+                  {{ pub.description }}
+                </p>
                 <p>{{ pub.date }}</p>
               </v-card-text>
             </v-card>
@@ -161,13 +162,13 @@ const info = ref({
   padding: 0 90px;
   width: 100%;
 }
-.pub{
-  &:hover{
+.pub {
+  &:hover {
     cursor: pointer;
   }
-  .pub-title:hover{
-      color: #2E7D32;
-    }
+  .pub-title:hover {
+    color: #2e7d32;
+  }
 
   .pub-description {
     font-size: 14px;

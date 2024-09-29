@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -15,7 +17,7 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: #064a81;
   text-decoration: inherit;
 }
 a:hover {
@@ -26,9 +28,9 @@ body {
   margin: 0;
   display: flex;
   place-items: center;
-  min-width: 320px;
+  min-width: 100vw;
   min-height: 100vh;
-  background-color: #e4bad4;
+  background-color: #fff;
 }
 
 h1 {
@@ -59,6 +61,9 @@ button:focus-visible {
   padding: 2em;
 }
 
+#__nuxt {
+  width: 100%;
+}
 /*@media (prefers-color-scheme: light) {*/
 /*  :root {*/
 /*    color: #213547;*/

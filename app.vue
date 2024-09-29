@@ -4,12 +4,11 @@
       <NuxtLayout>
         <NuxtPage />
       </NuxtLayout>
-      <NuxtRouteAnnouncer />
-      <NuxtWelcome />
+      <!-- <NuxtRouteAnnouncer />
+      <NuxtWelcome /> -->
     </div>
   </v-app>
 </template>
 <style lang="scss">
-@import url("~/assets/css/main.css");
-
+@import url("assets/css/main.css");
 </style>

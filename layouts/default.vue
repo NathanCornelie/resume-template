@@ -1,5 +1,5 @@
 <template>
-  <v-app class="app" style="width: 100vw">
+  <v-app class="app">
     <v-app-bar :elevation="2" class="nav-bar" height="72">
       <template v-slot:prepend>
         <p class="nav-name text-start">
@@ -39,15 +39,18 @@ const menus = ref<string[]>(["Experiences", "Articles", "Projects"]);
 const router = useRouter();
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 #app {
-  margin: 10px auto;
-  padding: 4rem;
-  background-color: #e4bad4;
+  margin: 10px 0;
+
+  padding-top: 4rem;
 }
 .app {
   width: 100%;
-  background-color: #e4bad4;
+  background-color: #ffffff;
+  p {
+    font-family: Kanit, sans-serif;
+  }
 }
 .nav-name {
   margin-left: 5px;
@@ -59,6 +62,9 @@ const router = useRouter();
 .menus {
   width: 100%;
   justify-content: space-around;
+  p {
+    color: #64b5f6;
+  }
 }
 .menu {
   margin: 0 10px;
