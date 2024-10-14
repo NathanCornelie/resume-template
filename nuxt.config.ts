@@ -13,7 +13,8 @@ export default defineNuxtConfig({
   css: ["@mdi/font/css/materialdesignicons.css"],
   modules: ["vuetify-nuxt-module", "nuxt-mdi", "@nuxt/image"],
   image: {
-    dir: "dist",
+    dir: "assets",
+    provider: "static",
   },
   vuetify: {
     vuetifyOptions: {
