@@ -45,17 +45,17 @@ jobs:
           #
           # You may remove this line if you want to manage the configuration yourself.
           static_site_generator: nuxt
-      - name: Restore cache
-        uses: actions/cache@v4
-        with:
-          path: |
-            dist
-            .nuxt
-          key: ${{ runner.os }}-nuxt-build-${{ hashFiles('dist') }}
-          restore-keys: |
-            ${{ runner.os }}-nuxt-build-
+      # - name: Restore cache
+      #   uses: actions/cache@v4
+      #   with:
+      #     path: |
+      #       dist
+      #       .nuxt
+      #     key: ${{ runner.os }}-nuxt-build-${{ hashFiles('dist') }}
+      #     restore-keys: |
+      #       ${{ runner.os }}-nuxt-build-
       - name: Install dependencies
-        run: pnpm ${{ steps.detect-package-manager.outputs.command }}
+        run: pnpm install
       - name: Static HTML export with Nuxt
         run: pnpm run generate
       - name: Upload artifact
