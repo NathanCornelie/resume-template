@@ -5,10 +5,10 @@ export default defineNuxtConfig({
   ssr: false, // Désactiver SSR pour un site statique
   // target: 'static', // Permet de générer un site statique
   app: {
-    baseURL: process.env.BASE_URL || "/", // Chemin de base (important pour GitHub Pages)
+    baseURL: process.env.BASE_URL || "/resume-template", // Chemin de base (important pour GitHub Pages)
   },
   vite: {
-    base: process.env.BASE_URL || "/",
+    base: process.env.BASE_URL || "/resume-template",
   },
   css: ["@mdi/font/css/materialdesignicons.css"],
   modules: ["vuetify-nuxt-module", "nuxt-mdi", "@nuxt/image"],
