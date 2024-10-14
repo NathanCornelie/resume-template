@@ -51,7 +51,7 @@ const experiences = [
     lieu: "Excellium Services Luxembourg",
     debut: "Mars 2024",
     fin: "Août 2024",
-    image: "/claim_logo.png",
+    image: "claim_logo.png",
     missions: [
       {
         titre: "Réalisation de scripts d’automatisation avec Ansible",
@@ -82,7 +82,7 @@ const experiences = [
     lieu: "Excellium Services Luxembourg",
     debut: "Mars 2024",
     fin: "Août 2024",
-    image: "/claim_logo.png",
+    image: "claim_logo.png",
     missions: [
       {
         titre: "Réalisation de scripts d’automatisation avec Ansible",
@@ -113,7 +113,7 @@ const experiences = [
     lieu: "BIAC Log SA Luxembourg",
     debut: "Juin 2023",
     fin: "Août 2023",
-    image: "/claim_logo.png",
+    image: "claim_logo.png",
     missions: [
       {
         titre:
@@ -134,7 +134,7 @@ const educations = [
     lieu: "BIAC Log SA Luxembourg",
     debut: "Juin 2023",
     fin: "Août 2023",
-    image: "/images/claim_logo.png",
+    image: "claim_logo.png",
     missions: [
       {
         titre:

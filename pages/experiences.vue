@@ -35,8 +35,7 @@
                 <template v-slot:text>
                   <div class="d-md-flex md-flex-column align-center">
                     <div class="d-flex align-center justify-center">
-                      <nuxt-img style="width: 300px" :src="exp.image">
-                      </nuxt-img>
+                      <v-img style="width: 300px" :src="exp.image"> </v-img>
                     </div>
 
                     <v-list class="bg-transparent">
@@ -95,8 +94,7 @@
                 <template v-slot:text>
                   <div class="d-md-flex md-flex-column align-center">
                     <div class="d-flex align-center justify-center">
-                      <nuxt-img style="width: 300px" :src="edu.image">
-                      </nuxt-img>
+                      <v-img style="width: 300px" :src="edu.image"> </v-img>
                     </div>
 
                     <v-list class="bg-transparent">
@@ -151,8 +149,7 @@
                 <template v-slot:text>
                   <div class="d-md-flex md-flex-column align-center">
                     <div class="d-flex align-center justify-center">
-                      <nuxt-img style="width: 300px" :src="awd.image">
-                      </nuxt-img>
+                      <v-img style="width: 300px" :src="awd.image"> </v-img>
                     </div>
 
                     <v-list class="bg-transparent">
