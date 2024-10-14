@@ -14,7 +14,7 @@ export default defineNuxtConfig({
   modules: ["vuetify-nuxt-module", "nuxt-mdi", "@nuxt/image"],
   image: {
     dir: "assets/images",
-    // provider: "ipx",
+    provider: "ipx",
   },
   vuetify: {
     vuetifyOptions: {
