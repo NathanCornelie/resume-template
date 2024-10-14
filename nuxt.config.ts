@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   compatibilityDate: "2024-04-03",
   devtools: { enabled: true },
-  ssr: false, // Désactiver SSR pour un site statique
+  // Désactiver SSR pour un site statique
   // target: 'static', // Permet de générer un site statique
   app: {
     baseURL: process.env.BASE_URL || "/resume-template", // Chemin de base (important pour GitHub Pages)
@@ -13,8 +13,8 @@ export default defineNuxtConfig({
   css: ["@mdi/font/css/materialdesignicons.css"],
   modules: ["vuetify-nuxt-module", "nuxt-mdi", "@nuxt/image"],
   image: {
-    dir: "assets",
-    provider: "static",
+    // dir: "assets",
+    // provider: "ipx",
   },
   vuetify: {
     vuetifyOptions: {
