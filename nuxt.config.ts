@@ -8,7 +8,7 @@ export default defineNuxtConfig({
     css: {
       preprocessorOptions: {
         scss: {
-          additionalData: '@forward "~/assets/scss/_variables.scss" as *;',
+         
         },
       },
     },
