@@ -4,6 +4,15 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ["@mdi/font/css/materialdesignicons.css"],
   modules: ["vuetify-nuxt-module", "nuxt-mdi", "@nuxt/image"],
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: '@use "~/assets/scss/_variables.scss" as *;',
+        },
+      },
+    },
+  },
   vuetify: {
     vuetifyOptions: {
       icons: {

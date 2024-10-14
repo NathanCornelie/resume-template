@@ -1,50 +1,6 @@
 <script setup lang="ts">
 import { ref } from "vue";
-
-const info = ref({
-  name: "Nathan CORNELIE",
-  job: "AI Reseacher",
-  about:
-    "Chien Shiung Wu is a professor of artificial " +
-    "intelligence at the Stanford AI Lab. Her research interests includ" +
-    "e distributed robotics, mobile computing and programmable matter. She leads the Robotic N" +
-    "eurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and" +
-    " mobile sensor networks.",
-  interest: [
-    "Artificial Intelligence",
-    "Computational Linguistics",
-    "Information Retrieval",
-  ],
-  educations: [
-    { title: "PhD Artificial Intelligence", school: "Stanford University" },
-    {
-      title: "MEng Artificial Intelligence",
-      school: "Massachusetts Institute of Technology",
-    },
-    {
-      title: "BSc Artificial Intelligence",
-      school: "Massachusetts Institute of Technology",
-    },
-  ],
-  publications: [
-    {
-      image: "/pub1.webp",
-      title: "An example preprint / working paper",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ]" +
-        "ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum.",
-      date: "Apr 7, 2019",
-    },
-    {
-      image: "/pub2.webp",
-      title: "An example preprint / working paper",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ]" +
-        "ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum.",
-      date: "Apr 7, 2019",
-    },
-  ],
-});
+import { informations, links } from "~/informations";
 </script>
 
 <template>
@@ -72,22 +28,21 @@ const info = ref({
             ></v-img>
           </v-card>
           <p class="font-weight-bold mt-4" style="color: #1e375a">
-            {{ info.name }}
+            {{ informations.name }}
           </p>
-          <p>{{ info.job }}</p>
+          <p>{{ informations.job }}</p>
           <div class="d-flex my-5">
-            <a href="https://www.linkedin.com/in/dilettachiaro/"
+            <a :href="links.linkedin"
               ><nuxt-img src="/linkedin_logo.png" sizes="40px" class="mx-2"
             /></a>
-            <a href="https://medium.com/@diletta.chiaro">
+            <a :href="links.medium">
               <nuxt-img src="/medium_logo.png" sizes="40px" class="mx-2" /></a
-            ><a
-              href="https://scholar.google.com/citations?user=n1VGy-gAAAAJ&hl=it"
+            ><a :href="links.scholar"
               ><nuxt-img
                 src="/google_scholar_logo.png"
                 sizes="40px"
                 class="mx-2" /></a
-            ><a href="https://github.com/dilettachiaro"
+            ><a :href="links.github"
               ><nuxt-img src="/github_logo.png" sizes="40px" class="mx-2"
             /></a>
           </div>
@@ -99,15 +54,15 @@ const info = ref({
           >
             <h3>About Me</h3>
             <p style="font-size: 16px">
-              Chien Shiung Wu is a professor of artificial intelligence at the
-              Stanford AI Lab. Her research interests include distributed
-              robotics, mobile computing and programmable matter.<br />
-              She leads the Robotic Neurobiology group, which develops
-              self-reconfiguring robots, systems of self-organizing robots, and
-              mobile sensor networks.
+              {{ informations.about }}
             </p>
             <v-btn base-color=" bg-blue-lighten-2 mt-4">
-              <mdicon name="tray-arrow-down"></mdicon>
+              <mdi-icon
+                icon="mdiTrayArrowDown"
+                color="white"
+                size="1.2rem"
+                class="mr-2"
+              ></mdi-icon>
               <span>Download CV</span>
             </v-btn>
             <div class="d-flex mt-4 justify-space-between">
@@ -115,7 +70,9 @@ const info = ref({
                 <h3>Interest</h3>
 
                 <div>
-                  <li v-for="interest in info.interest">{{ interest }}</li>
+                  <li v-for="interest in informations.interest">
+                    {{ interest }}
+                  </li>
                 </div>
               </v-card>
 
@@ -123,12 +80,12 @@ const info = ref({
                 <h3>Education</h3>
                 <v-list class="bg-transparent">
                   <v-list-item
-                    v-for="(education, index) in info.educations"
+                    v-for="(education, index) in informations.educations"
                     :key="index"
                     class="bg-transparent"
                   >
                     <template v-slot:prepend>
-                      <mdicon name="school-outline"></mdicon>
+                      <mdi-icon icon="mdiSchool" size="1.6rem"></mdi-icon>
                     </template>
                     <v-list-item-title class="ml-1">{{
                       education.title
@@ -169,32 +126,6 @@ const info = ref({
         </div>
       </v-card>
     </section>
-
-    <!-- <section>
-      <v-card>
-        <h2>Featured Publications</h2>
-        <v-container fluid>
-          <v-row dense>
-            <v-col
-              v-for="(pub, index) in info.publications"
-              :key="index"
-              cols="6"
-            >
-              <v-card class="text-start mx-5 pub">
-                <v-img :src="pub.image"></v-img>
-                <v-card-text>
-                  <h3 class="pub-title">{{ pub.title }}</h3>
-                  <p class="pub-description text-grey-darken-2">
-                    {{ pub.description }}
-                  </p>
-                  <p>{{ pub.date }}</p>
-                </v-card-text>
-              </v-card>
-            </v-col>
-          </v-row>
-        </v-container>
-      </v-card>
-    </section> -->
   </div>
 </template>
 

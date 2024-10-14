@@ -10,5 +10,5 @@
   </v-app>
 </template>
 <style lang="scss">
-@import url("assets/css/main.css");
+@import url("assets/css/main.scss");
 </style>
