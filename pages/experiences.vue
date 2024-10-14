@@ -190,7 +190,7 @@ import { educations } from "~/informations";
 .main {
   width: 100%;
   min-height: calc(100vh - 4rem);
-  background-color: $background_secondary;
+  background-color: #f6fafd;
 }
 .expCard {
   width: 100%;

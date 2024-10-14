@@ -49,6 +49,6 @@ import { conferences } from "~/informations";
   flex-direction: column;
   align-items: center;
   font-family: Kanit, sans-serif;
-  background-color: $background;
+  background-color: #fff;
 }
 </style>
