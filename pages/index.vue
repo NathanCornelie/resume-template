@@ -33,17 +33,17 @@ import { informations, links } from "~/informations";
           <p>{{ informations.job }}</p>
           <div class="d-flex my-5">
             <a :href="links.linkedin"
-              ><nuxt-img src="/linkedin_logo.png" sizes="40px" class="mx-2"
+              ><v-img src="/linkedin_logo.png" width="40px" class="mx-2"
             /></a>
             <a :href="links.medium">
-              <nuxt-img src="/medium_logo.png" sizes="40px" class="mx-2" /></a
+              <v-img src="/medium_logo.png" width="40px" class="mx-2" /></a
             ><a :href="links.scholar"
-              ><nuxt-img
+              ><v-img
                 src="/google_scholar_logo.png"
-                sizes="40px"
+                width="40px"
                 class="mx-2" /></a
             ><a :href="links.github"
-              ><nuxt-img src="/github_logo.png" sizes="40px" class="mx-2"
+              ><v-img src="/github_logo.png" width="40px" class="mx-2"
             /></a>
           </div>
         </div>
@@ -122,7 +122,7 @@ import { informations, links } from "~/informations";
         <div
           class="research_right mx-0 ml-lg-10 d-flex justify-start w-66 w-lg-50"
         >
-          <nuxt-img src="/research.webp" width="800" height="460" />
+          <v-img src="/research.webp" width="800" height="460" />
         </div>
       </v-card>
     </section>

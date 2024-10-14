@@ -35,7 +35,7 @@
                 <template v-slot:text>
                   <div class="d-md-flex md-flex-column align-center">
                     <div class="d-flex align-center justify-center">
-                      <nuxt-img style="width: 300px" src="/claim_logo.png">
+                      <nuxt-img style="width: 300px" :src="exp.image">
                       </nuxt-img>
                     </div>
 
@@ -151,7 +151,7 @@
                 <template v-slot:text>
                   <div class="d-md-flex md-flex-column align-center">
                     <div class="d-flex align-center justify-center">
-                      <nuxt-img style="width: 300px" src="/claim_logo.png">
+                      <nuxt-img style="width: 300px" :src="awd.image">
                       </nuxt-img>
                     </div>
 
