@@ -1,37 +1,41 @@
+# https://github.com/actions/deploy-pages#usage
 name: Deploy to GitHub Pages
-
 on:
+  workflow_dispatch:
   push:
     branches:
-      - main # Déclenche le workflow à chaque push sur la branche "main"
-
+      - main
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
-
     steps:
-      # Étape 1 : Cloner le dépôt
-      - name: Checkout the repository
-        uses: actions/checkout@v3
-
-      # Étape 2 : Installer pnpm
-      - name: Setup pnpm
-        run: |
-          npm install -g pnpm
-
-      # Étape 3 : Installer les dépendances avec pnpm
-      - name: Install dependencies
-        run: pnpm install
-
-      # Étape 4 : Générer les fichiers statiques avec pnpm
-      - name: Generate static files
-        env:
-          BASE_URL: /nom-depot/ # Remplace par le nom de ton dépôt GitHub
-        run: pnpm run generate
-
-      # Étape 5 : Déployer sur GitHub Pages
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+      - uses: actions/checkout@v4
+      - run: corepack enable
+      - uses: actions/setup-node@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+          node-version: "20"
+      # Pick your own package manager and build script
+      - run: npm install
+      - run: npx nuxt build --preset github_pages
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./.output/public
+  # Deployment job
+  deploy:
+    # Add a dependency to the build job
+    needs: build
+    # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
+    permissions:
+      pages: write      # to deploy to Pages
+      id-token: write   # to verify the deployment originates from an appropriate source
+    # Deploy to the github_pages environment
+    environment:
+      name: github_pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    # Specify runner + deployment step
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
