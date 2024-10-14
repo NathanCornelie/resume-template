@@ -17,12 +17,12 @@
       </template>
       <template v-slot:append>
         <v-btn color="primary">
-          <mdicon
+          <!-- <mdicon
             name="magnify"
             class="nav-icon"
             style="margin-right: 5px"
           ></mdicon>
-          <mdicon name="white-balance-sunny" class="nav-icon"></mdicon>
+          <mdicon name="white-balance-sunny" class="nav-icon"></mdicon> -->
         </v-btn>
       </template>
     </v-app-bar>
@@ -34,8 +34,8 @@
 
 <script lang="ts" setup>
 import { ref } from "vue";
-const name = ref("Nathan CORNELIE");
-const menus = ref<string[]>(["Experiences", "Articles"]);
+const name = ref("Diletta CHIARO");
+const menus = ref<string[]>(["Experiences", "Articles", "Conferences"]);
 const router = useRouter();
 </script>
 
