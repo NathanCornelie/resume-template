@@ -134,7 +134,7 @@ const educations = [
     lieu: "BIAC Log SA Luxembourg",
     debut: "Juin 2023",
     fin: "Août 2023",
-    image: "/claim_logo.png",
+    image: "/images/claim_logo.png",
     missions: [
       {
         titre:
