@@ -15,7 +15,7 @@
     <div>
       <h2>Working Experience</h2>
     </div>
-    <v-timeline direction="vertical" class="px-15" side="end">
+    <v-timeline direction="vertical" class="px-3 px-md-15" side="end">
       <v-timeline-item
         v-for="exp in experiences"
         style="width: 100%; background-color: red"
@@ -39,7 +39,8 @@
           <template v-slot:text>
             <div class="d-md-flex md-flex-column align-center">
               <div class="d-flex align-center justify-center">
-                <v-img style="width: 300px" :src="exp.image"> </v-img>
+                <v-img style="max-width: 300px" class="image" :src="exp.image">
+                </v-img>
               </div>
 
               <v-list class="bg-transparent">
@@ -196,5 +197,11 @@ import { educations } from "~/informations";
   max-width: 1200px;
   background-color: #fff;
   border: 2px solid white;
+  .image {
+    width: 100%;
+    @media (min-width: 960px) {
+      width: 300px;
+    }
+  }
 }
 </style>
