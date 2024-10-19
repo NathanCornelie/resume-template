@@ -2,11 +2,11 @@ import { createApp } from "vue";
 
 import { createMemoryHistory, createRouter } from "vue-router";
 // Vuetify
-import "vuetify/styles";
+// import "vuetify/styles";
 import { createVuetify } from "vuetify";
 import * as components from "vuetify/components";
 import * as directives from "vuetify/directives";
-import "@/assets/css/variable.scss";
+import "@/assets/css/main.scss";
 //icons
 // import mdiVue from "mdi-vue/v3";
 // import * as mdijs from "@mdi/js";

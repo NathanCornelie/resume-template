@@ -15,14 +15,20 @@
     <div>
       <h2>Working Experience</h2>
     </div>
-    <v-timeline direction="vertical" class="px-3 px-md-15" side="end">
+    <v-timeline
+      direction="vertical"
+      class="px-3 px-md-15 py-5"
+      side="end"
+      density="comfortable"
+    >
       <v-timeline-item
+        v-if="display"
         v-for="exp in experiences"
         style="width: 100%; background-color: red"
         dot-color="#64B5F6"
       >
         <template v-slot:opposite>
-          <div class="d-flex flex-column align-center">
+          <div class="d-flex flex-column align-center" v-if="!isMedium">
             <p>{{ exp.debut }}</p>
             <p>-</p>
             <p>{{ exp.fin }}</p>
@@ -36,6 +42,10 @@
           :title="exp.titre"
           :subtitle="exp.lieu"
         >
+          <template v-slot:subtitle>
+            <p>{{ exp.lieu }}</p>
+            <p v-if="isMedium">{{ exp.debut }} -{{ exp.fin }}</p>
+          </template>
           <template v-slot:text>
             <div class="d-md-flex md-flex-column align-center">
               <div class="d-flex align-center justify-center">
@@ -181,10 +191,31 @@
 import { experiences } from "~/informations";
 import { awards } from "~/informations";
 import { educations } from "~/informations";
+const isMedium = ref(false);
+const display = ref(false);
+onMounted(() => {
+  onResize();
+  display.value = true;
+  nextTick(() => {
+    window.addEventListener("resize", onResize);
+  });
+});
+onBeforeUnmount(() => {
+  window.removeEventListener("resize", onResize);
+});
+const onResize = () => {
+  console.log(window.innerWidth);
+  isMedium.value = window.innerWidth < 960;
+};
 </script>
 
 <style scoped lang="scss">
 .main {
+  .v-timeline--vertical.v-timeline.v-timeline--side-end
+    .v-timeline-item
+    .v-timeline-item__opposite {
+    margin-top: 30px;
+  }
   width: 100%;
   min-height: calc(100vh - 4rem);
   background-color: #f6fafd;
