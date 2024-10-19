@@ -109,20 +109,22 @@ import { informations, links } from "~/informations";
         <div class="research_left w-lg-50 w-66">
           <h2>My Researches</h2>
           <p>
-            Use this area to speak to your mission. I’m a research scientist in
-            the Moonshot team at DeepMind. I blog about machine learning, deep
-            learning, and moonshots.<br />
-            <br />
-            I apply a range of qualitative and quantitative methods to
-            comprehensively investigate the role of science and technology in
-            the economy. Please reach out to collaborate 😃
+            {{ informations.my_researches.content }}
           </p>
-          <v-btn class="bg-blue-lighten-2"> <span>View Articles</span></v-btn>
+          <a href="articles"
+            ><v-btn class="bg-blue-lighten-2">
+              <span>View Articles</span></v-btn
+            ></a
+          >
         </div>
         <div
           class="research_right mx-0 ml-lg-10 d-flex justify-start w-66 w-lg-50"
         >
-          <v-img src="/research.webp" width="800" height="460" />
+          <v-img
+            :src="informations.my_researches.image"
+            width="800"
+            height="460"
+          />
         </div>
       </v-card>
     </section>

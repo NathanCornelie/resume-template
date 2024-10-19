@@ -1,66 +1,65 @@
 <template>
   <div class="main py-10">
-    <v-expansion-panels class="mx-5 w-auto" multiple>
+    <!-- <v-expansion-panels class="mx-5 w-auto" multiple>
       <v-expansion-panel
         style="background-color: #f6fafd"
         v-if="experiences.length"
       >
         <v-expansion-panel-title class="bg-white"
-          ><div>
-            <p>Working Experience</p>
-          </div>
+          >
         </v-expansion-panel-title>
         <v-expansion-panel-text
-          ><v-timeline direction="vertical" class="px-15" side="end">
-            <v-timeline-item
-              v-for="exp in experiences"
-              style="width: 100%; background-color: red"
-              dot-color="#64B5F6"
-            >
-              <template v-slot:opposite>
-                <div class="d-flex flex-column align-center">
-                  <p>{{ exp.debut }}</p>
-                  <p>-</p>
-                  <p>{{ exp.fin }}</p>
-                </div>
-              </template>
-
-              <v-card
-                variant="elevated"
-                class="expCard"
-                elevation="3"
-                :title="exp.titre"
-                :subtitle="exp.lieu"
-              >
-                <template v-slot:text>
-                  <div class="d-md-flex md-flex-column align-center">
-                    <div class="d-flex align-center justify-center">
-                      <v-img style="width: 300px" :src="exp.image"> </v-img>
-                    </div>
-
-                    <v-list class="bg-transparent">
-                      <v-list-item v-for="mission in exp.missions">
-                        <div
-                          class="d-flex flex-column align-start justify-start"
-                        >
-                          <h4>{{ mission.titre }}</h4>
-                          <div class="pl-2">
-                            <div v-for="tache in mission.taches">
-                              {{ tache }}
-                            </div>
-                          </div>
-                        </div>
-                      </v-list-item>
-                    </v-list>
-                  </div>
-                </template>
-              </v-card>
-            </v-timeline-item>
-          </v-timeline>
+          >
         </v-expansion-panel-text>
-      </v-expansion-panel>
+      </v-expansion-panel> -->
+    <div>
+      <h2>Working Experience</h2>
+    </div>
+    <v-timeline direction="vertical" class="px-15" side="end">
+      <v-timeline-item
+        v-for="exp in experiences"
+        style="width: 100%; background-color: red"
+        dot-color="#64B5F6"
+      >
+        <template v-slot:opposite>
+          <div class="d-flex flex-column align-center">
+            <p>{{ exp.debut }}</p>
+            <p>-</p>
+            <p>{{ exp.fin }}</p>
+          </div>
+        </template>
 
-      <v-expansion-panel
+        <v-card
+          variant="elevated"
+          class="expCard"
+          elevation="3"
+          :title="exp.titre"
+          :subtitle="exp.lieu"
+        >
+          <template v-slot:text>
+            <div class="d-md-flex md-flex-column align-center">
+              <div class="d-flex align-center justify-center">
+                <v-img style="width: 300px" :src="exp.image"> </v-img>
+              </div>
+
+              <v-list class="bg-transparent">
+                <v-list-item v-for="mission in exp.missions">
+                  <div class="d-flex flex-column align-start justify-start">
+                    <h4>{{ mission.titre }}</h4>
+                    <div class="pl-2">
+                      <div v-for="tache in mission.taches">
+                        {{ tache }}
+                      </div>
+                    </div>
+                  </div>
+                </v-list-item>
+              </v-list>
+            </div>
+          </template>
+        </v-card>
+      </v-timeline-item>
+    </v-timeline>
+    <!-- <v-expansion-panel
         style="background-color: #f6fafd"
         v-if="educations.length"
       >
@@ -172,8 +171,8 @@
             </v-timeline-item>
           </v-timeline>
         </v-expansion-panel-text>
-      </v-expansion-panel>
-    </v-expansion-panels>
+      </v-expansion-panel> -->
+    <!-- </v-expansion-panels> -->
   </div>
 </template>
 
@@ -188,6 +187,9 @@ import { educations } from "~/informations";
   width: 100%;
   min-height: calc(100vh - 4rem);
   background-color: #f6fafd;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .expCard {
   width: 100%;

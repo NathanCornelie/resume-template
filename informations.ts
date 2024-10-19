@@ -42,6 +42,11 @@ const informations = {
       date: "Apr 7, 2019",
     },
   ],
+  my_researches: {
+    content:
+      "Use this area to speak to your mission. I’m a research scientist in the Moonshot team at DeepMind. I blog about machine learning, deep learning, and moonshots.I apply a range of qualitative and quantitative methods to comprehensively investigate the role of science and technology in the economy. Please reach out to collaborate 😃",
+    image: "research.webp",
+  },
 };
 
 // EXPERIENCES PAGE
@@ -156,7 +161,7 @@ const awards = [
     lieu: "BIAC Log SA Luxembourg",
     debut: "Juin 2023",
     fin: "",
-    image: "/claim_logo.png",
+    image: "claim_logo.png",
     missions: [
       {
         titre:

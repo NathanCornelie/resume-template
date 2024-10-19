@@ -1,6 +1,6 @@
 <template>
   <div class="main"><h2>Conferences</h2></div>
-  <div class="pa-10 mx-5">
+  <div class="pa-10 mx-10">
     <v-row dense>
       <v-col v-for="(conference, index) in conferences" :key="index" cols="6">
         <v-card>
