@@ -20,7 +20,7 @@
               </div>
               <div>
                 <a :href="conference.link">
-                  <nuxt-img style="width: 150px" src="conference.png" />
+                  <v-img style="width: 150px" :src="conference.image" />
                 </a>
               </div>
             </div>

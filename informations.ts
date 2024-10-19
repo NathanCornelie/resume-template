@@ -185,18 +185,21 @@ const conferences = [
     place: "Paris, FRANCE",
     date: "24th December 2023",
     link: "https://albarqouni.github.io/",
+    image: "conference.png",
   },
   {
     name: "Medical Imaging with Deep Learning Conference",
     place: "Paris, FRANCE",
     date: "24th December 2023",
     link: "https://albarqouni.github.io/",
+    image: "conference.png",
   },
   {
     name: "Medical Imaging with Deep Learning Conference",
     place: "Paris, FRANCE",
     date: "24th December 2023",
     link: "https://albarqouni.github.io/",
+    image: "conference.png",
   },
 ];
 
