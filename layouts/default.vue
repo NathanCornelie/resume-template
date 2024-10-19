@@ -7,7 +7,7 @@
         </p>
       </template>
       <template v-slot:default class="menus">
-        <div v-for="menu in menus" class="menu">
+        <div v-for="menu in menus" class="menu d-md-block">
           <p>
             <NuxtLink :to="'/' + menu.toLowerCase()">{{
               menu.toString()
@@ -16,14 +16,30 @@
         </div>
       </template>
       <template v-slot:append>
-        <v-btn color="primary">
-          <!-- <mdicon
-            name="magnify"
-            class="nav-icon"
-            style="margin-right: 5px"
-          ></mdicon>
-          <mdicon name="white-balance-sunny" class="nav-icon"></mdicon> -->
-        </v-btn>
+        <v-menu>
+          <template v-slot:activator="{ props }">
+            <v-btn color="primary" class="d-md-none" v-bind="props">
+              <mdi-icon
+                icon="mdiDotsVertical"
+                size="1.6rem"
+                class="nav-icon"
+              ></mdi-icon>
+            </v-btn>
+          </template>
+          <v-list>
+            <v-list-item
+              v-for="(menu, index) in menus"
+              :key="index"
+              :value="index"
+            >
+              <v-list-item-title
+                ><NuxtLink :to="'/' + menu.toLowerCase()">{{
+                  menu.toString()
+                }}</NuxtLink></v-list-item-title
+              >
+            </v-list-item>
+          </v-list>
+        </v-menu>
       </template>
     </v-app-bar>
     <div id="app">
@@ -67,6 +83,7 @@ const router = useRouter();
   }
 }
 .menu {
+  display: none;
   margin: 0 10px;
 }
 .nav-icon {

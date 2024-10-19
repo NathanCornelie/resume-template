@@ -4,15 +4,15 @@ import { informations, links } from "~/informations";
 </script>
 
 <template>
-  <div class="pa-5 main">
+  <div class="pa-md-5 main">
     <v-card
       class="d-lg-flex d-block"
       min-height="500px"
-      variant="outlined"
-      style="border: 2px solid #1e375a24; width: 80%"
+      variant="flat"
+      style="width: 80%"
     >
       <div
-        class="infos-container d-flex flex-lg-row flex-column align-center justify-space-around pa-16"
+        class="infos-container d-flex flex-lg-row flex-column align-center justify-space-around pa-2 pa-md-16"
       >
         <div class="w-50 d-flex flex-column align-center justify-center">
           <v-card
@@ -65,7 +65,9 @@ import { informations, links } from "~/informations";
               ></mdi-icon>
               <span>Download CV</span>
             </v-btn>
-            <div class="d-flex mt-4 justify-space-between">
+            <div
+              class="d-flex flex-md-row flex-column mt-4 justify-space-between"
+            >
               <v-card class="bg-transparent text-start" :elevation="0">
                 <h3>Interest</h3>
 
@@ -76,7 +78,10 @@ import { informations, links } from "~/informations";
                 </div>
               </v-card>
 
-              <v-card class="bg-transparent text-start" :elevation="0">
+              <v-card
+                class="bg-transparent text-start mt-4 mt-md-0"
+                :elevation="0"
+              >
                 <h3>Education</h3>
                 <v-list class="bg-transparent">
                   <v-list-item
@@ -140,6 +145,10 @@ import { informations, links } from "~/informations";
   .infos-container {
     color: rgba(30, 55, 90, 0.7);
 
+    @media (max-width: 960px) {
+      border: none;
+    }
+    border: 2px solid #1e375a24;
     h3 {
       font-size: 20px;
       margin-bottom: 10px;
