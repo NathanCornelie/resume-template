@@ -14,7 +14,9 @@ import { informations, links } from "~/informations";
       <div
         class="infos-container d-flex flex-lg-row flex-column align-center justify-space-around pa-2 pa-md-16"
       >
-        <div class="w-50 d-flex flex-column align-center justify-center">
+        <div
+          class="w-50 mt-5 mt-md-0 d-flex flex-column align-center justify-center"
+        >
           <v-card
             class="photo"
             max-width="340px"
@@ -106,33 +108,28 @@ import { informations, links } from "~/informations";
         </div>
       </div>
     </v-card>
-    <section class="d-flex justify-center my-10 py-10 align-center">
-      <v-card
-        variant="flat"
-        class="research_card d-flex flex-column flex-lg-row flex-column flex-lg-row justify-center align-center"
-      >
-        <div class="research_left w-lg-50 w-66">
-          <h2>My Researches</h2>
-          <p>
-            {{ informations.my_researches.content }}
-          </p>
-          <a href="articles"
-            ><v-btn class="bg-blue-lighten-2">
-              <span>View Articles</span></v-btn
-            ></a
-          >
-        </div>
-        <div
-          class="research_right mx-0 ml-lg-10 d-flex justify-start w-66 w-lg-50"
+
+    <v-card
+      variant="flat"
+      class="research_card mt-5 d-flex flex-column flex-lg-row flex-column flex-lg-row justify-center align-center"
+    >
+      <div class="research_left w-lg-50 w-75">
+        <h2>My Researches</h2>
+        <p>
+          {{ informations.my_researches.content }}
+        </p>
+        <a href="articles"
+          ><v-btn class="bg-blue-lighten-2">
+            <span>View Articles</span></v-btn
+          ></a
         >
-          <v-img
-            :src="informations.my_researches.image"
-            width="800"
-            height="460"
-          />
-        </div>
-      </v-card>
-    </section>
+      </div>
+      <div
+        class="research_right mx-0 w-100 ml-lg-10 d-flex justify-start w-66 w-lg-50"
+      >
+        <v-img :src="informations.my_researches.image" width="800" />
+      </div>
+    </v-card>
   </div>
 </template>
 
