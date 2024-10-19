@@ -1,8 +1,14 @@
 <template>
   <div class="main"><h2>Conferences</h2></div>
-  <div class="pa-10 mx-10">
-    <v-row dense>
-      <v-col v-for="(conference, index) in conferences" :key="index" cols="6">
+  <div class="pa-md-10 py-5 mx-10">
+    <v-row>
+      <v-col
+        v-for="(conference, index) in conferences"
+        :key="index"
+        cols="12"
+        md="6"
+        sm="6"
+      >
         <v-card>
           <template v-slot:text>
             <div class="d-flex h-100 justify-space-between">
@@ -18,9 +24,9 @@
 
                 <p>{{ conference.date }}</p>
               </div>
-              <div>
+              <div style="width: 100%">
                 <a :href="conference.link">
-                  <v-img style="width: 150px" :src="conference.image" />
+                  <v-img class="image" :src="conference.image" />
                 </a>
               </div>
             </div>
@@ -50,5 +56,11 @@ import { conferences } from "~/informations";
   align-items: center;
   font-family: Kanit, sans-serif;
   background-color: #fff;
+}
+.image {
+  width: 100%;
+  @media (min-width: 960px) {
+    width: 150px;
+  }
 }
 </style>
