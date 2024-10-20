@@ -24,9 +24,9 @@
 
                 <p>{{ conference.date }}</p>
               </div>
-              <div style="width: 100%">
+              <div class="image">
                 <a :href="conference.link">
-                  <v-img class="image" :src="conference.image" />
+                  <v-img :src="conference.image" />
                 </a>
               </div>
             </div>
