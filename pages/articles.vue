@@ -80,13 +80,7 @@ const articles = ref([
 .main {
   min-height: 100vh;
   background-color: #f6fafd;
-  & > h2 {
-    font-size: 26px;
-    text-align: center;
-    font-family: Kanit, sans-serif;
-    color: #1e375a;
-    text-decoration: underline;
-  }
+
   .card {
     background-color: #ffffff;
     border: 2px solid white;

@@ -209,4 +209,15 @@ const links = {
   scholar: "https://scholar.google.com/citations?user=n1VGy-gAAAAJ&hl=it",
   medium: "https://medium.com/@diletta.chiaro",
 };
-export { conferences, informations, experiences, educations, awards, links };
+const gallery = {
+  imgSrc: ["1.png", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg"],
+};
+export {
+  conferences,
+  informations,
+  experiences,
+  educations,
+  awards,
+  links,
+  gallery,
+};
