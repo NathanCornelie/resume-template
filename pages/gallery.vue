@@ -10,7 +10,7 @@
         sm="12"
       >
         <v-card class="d-flex alignCenter">
-          <v-img :src="img" />
+          <v-img :src="`./gallery/${img}`" />
         </v-card>
       </v-col>
     </v-row>
