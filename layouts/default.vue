@@ -51,7 +51,12 @@
 <script lang="ts" setup>
 import { ref } from "vue";
 const name = ref("Diletta CHIARO");
-const menus = ref<string[]>(["Experiences", "Articles", "Conferences","Gallery"]);
+const menus = ref<string[]>([
+  "Experiences",
+  "Articles",
+  "Conferences",
+  "Gallery",
+]);
 const router = useRouter();
 </script>
 
