@@ -32,48 +32,7 @@
 </template>
 
 <script lang="ts" setup>
-const articles = ref([
-  {
-    titre:
-      "L’Intelligenza Artificiale Rivoluziona l’Onboarding dei Dipendenti: Automazione, Personalizzazione e Produttività",
-    description:
-      "L’uso dell’intelligenza artificiale  permettonoL’uso dell’intelligenza artificiale  permettonoL’uso dell’intelligenza artificiale  permettonoL’uso dell’intelligenza artificiale  permettonoL’uso dell’intelligenza artificiale  permettonoL’uso dell’intelligenza artificiale  permettonoL’uso dell’intelligenza artificiale  permettono",
-    date: "12th March 2024",
-    lien: "https://www.claim-project.it/lintelligenza-artificiale-rivoluziona-lonboarding-dei-dipendenti-automazione-personalizzazione-e-produttivita/",
-  },
-  {
-    titre:
-      "L’Intelligenza Artificiale Rivoluziona l’Onboarding dei Dipendenti: Automazione, Personalizzazione e Produttività",
-    description:
-      "L’uso dell’intelligenza artificiale nell’onboarding dei dipendenti sta rapidamente trasformando il modo in cui le aziende accolgono e integrano i nuovi assunti. Le tecnologie AI non solo automatizzano processi ripetitivi, ma permettono",
-    date: "12th March 2024",
-    lien: "https://www.claim-project.it/lintelligenza-artificiale-rivoluziona-lonboarding-dei-dipendenti-automazione-personalizzazione-e-produttivita/",
-  },
-  {
-    titre:
-      "L’Intelligenza Artificiale Rivoluziona l’Onboarding dei Dipendenti: Automazione, Personalizzazione e Produttività",
-    description:
-      "L’uso dell’intelligenza artificiale nell’onboarding dei dipendenti sta rapidamente trasformando il modo in cui le aziende accolgono e integrano i nuoviL’uso dell’intelligenza artificiale nell’onboarding dei dipendenti sta rapidamente trasformando il modo in cui le aziende accolgono e integrano i nuovi assunti. Le tecnologie AI non solo automatizzano processi ripetitivi, ma permettono",
-    date: "12th March 2024",
-    lien: "https://www.claim-project.it/lintelligenza-artificiale-rivoluziona-lonboarding-dei-dipendenti-automazione-personalizzazione-e-produttivita/",
-  },
-  {
-    titre:
-      "L’Intelligenza Artificiale Rivoluziona l’Onboarding dei Dipendenti: Automazione, Personalizzazione e Produttività",
-    description:
-      "L’uso dell’intelligenza artificiale nell’onboarding dei dipendenti sta rapidamente trasformando il modo in cui le aziende accolgono e integrano i nuovi assunti. Le tecnologie AI non solo automatizzano processi ripetitivi, ma permettono",
-    date: "12th March 2024",
-    lien: "https://www.claim-project.it/lintelligenza-artificiale-rivoluziona-lonboarding-dei-dipendenti-automazione-personalizzazione-e-produttivita/",
-  },
-  {
-    titre:
-      "L’Intelligenza Artificiale Rivoluziona l’Onboarding dei Dipendenti: Automazione, Personalizzazione e Produttività",
-    description:
-      "L’uso dell’intelligenza artificiale nell’onboarding dei dipendenti sta rapidamente trasformando il modo in cui le aziende accolgono e integrano i nuovi assunti. Le tecnologie AI non solo automatizzano processi ripetitivi, ma permettono",
-    date: "12th March 2024",
-    lien: "https://www.claim-project.it/lintelligenza-artificiale-rivoluziona-lonboarding-dei-dipendenti-automazione-personalizzazione-e-produttivita/",
-  },
-]);
+import { articles } from "~/informations";
 </script>
 
 <style scoped lang="scss">
