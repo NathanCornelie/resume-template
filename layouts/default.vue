@@ -74,6 +74,7 @@ const router = useRouter();
   }
 }
 .nav-name {
+  position: absolute;
   margin-left: 5px;
 }
 .nav-bar {
@@ -84,14 +85,16 @@ const router = useRouter();
 .menus {
   position: relative;
   width: 100%;
-  justify-content: space-around;
+
+  display: flex;
+  justify-content: center;
   p {
     color: #64b5f6;
   }
 }
 .menus2 {
   display: flex;
-  position: absolute;
+
   width: 100%;
   justify-content: center;
 }
