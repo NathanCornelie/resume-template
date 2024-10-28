@@ -15,16 +15,10 @@
     <div>
       <h2>Working Experience</h2>
     </div>
-    <v-timeline
-      direction="vertical"
-      class="px-3 px-md-15 py-5"
-      side="end"
-      density="comfortable"
-    >
+    <v-timeline direction="vertical" class="px-3 px-md-15 py-5" side="end">
       <v-timeline-item
         v-if="display"
         v-for="exp in experiences"
-        style="width: 100%; background-color: red"
         dot-color="#64B5F6"
       >
         <template v-slot:opposite>
@@ -222,9 +216,9 @@ const onResize = () => {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 .expCard {
-  width: 100%;
   max-width: 1200px;
   background-color: #fff;
   border: 2px solid white;
