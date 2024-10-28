@@ -198,7 +198,6 @@ onBeforeUnmount(() => {
   window.removeEventListener("resize", onResize);
 });
 const onResize = () => {
-  console.log(window.innerWidth);
   isMedium.value = window.innerWidth < 960;
 };
 </script>

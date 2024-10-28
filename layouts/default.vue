@@ -1,18 +1,18 @@
 <template>
   <v-app class="app">
     <v-app-bar :elevation="2" class="nav-bar" height="72">
-      <template v-slot:prepend>
+      <template v-slot:default class="menus">
         <p class="nav-name text-start">
           <NuxtLink to="/">{{ name }}</NuxtLink>
         </p>
-      </template>
-      <template v-slot:default class="menus">
-        <div v-for="menu in menus" class="menu d-md-block">
-          <p>
-            <NuxtLink :to="'/' + menu.toLowerCase()">{{
-              menu.toString()
-            }}</NuxtLink>
-          </p>
+        <div class="menus2">
+          <div v-for="menu in menus" class="menu d-md-block">
+            <p>
+              <NuxtLink :to="'/' + menu.toLowerCase()">{{
+                menu.toString()
+              }}</NuxtLink>
+            </p>
+          </div>
         </div>
       </template>
       <template v-slot:append>
@@ -77,15 +77,23 @@ const router = useRouter();
   margin-left: 5px;
 }
 .nav-bar {
+  position: relative;
   font-size: 1.25rem;
   font-weight: 600;
 }
 .menus {
+  position: relative;
   width: 100%;
   justify-content: space-around;
   p {
     color: #64b5f6;
   }
+}
+.menus2 {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  justify-content: center;
 }
 .menu {
   display: none;
